@@ -1,0 +1,36 @@
+import math 
+import pygame
+pygame.init()
+#SETTINGS
+HEIGHT = 600
+WIDTH = 1000
+CENTERX = WIDTH // 2
+CENTERY = HEIGHT // 2
+FPS = 40
+TILE = 50
+
+#RAYCAST SETTINGS
+FOV = math.pi/ 3
+HALF_FOV = FOV / 2
+NUM_RAYS = 200
+MAX_DEPTH = 0
+DELTA_ANGLE = FOV / NUM_RAYS
+DISTANCE = NUM_RAYS / (2*math.tan(HALF_FOV))
+PROJ_CO = 3*DISTANCE * TILE
+SCALE = WIDTH // NUM_RAYS
+FPS_POS = (WIDTH-140, 5)
+
+#PLAYER SETTINGS
+player_pos = (75,75)
+player_angle = 0
+player_speed = 2 
+player_rotation = 0.05
+
+#COLORS
+GRAY = (50,50,50)
+GREEN = (0,255,0)
+WHITE = (255,255,255)
+RED = (255, 0, 0)
+BLACK = (0,0,0)
+BLUE = (0,0,255)
+LIGHTBLUE = (135,206,235)
